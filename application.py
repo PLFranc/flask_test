@@ -1,6 +1,6 @@
 from flask import Flask
 application = Flask(__name__)
-
+app = application
 
 
 @application.route('/')
@@ -14,4 +14,4 @@ def index():
 
 
 if __name__ == '__main__':
-    application.run(debug=True)
+    application.run(host='127.0.0.1',port=8000, debug=True)
