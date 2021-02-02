@@ -1,16 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 application = Flask(__name__)
 app = application
 
 
 @application.route('/')
-def hello():
-    return "Hello World 1"
-
-
-@application.route('/index')
 def index():
-    return "Hey This is an index page"
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
