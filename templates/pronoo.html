@@ -3,7 +3,6 @@
 {% block body %}
     <!--include these script in head section or wherever you want-->
 
-
     <div class="container">
         <div class="empty"></div>
         <div class = "tennis fade-in"><img src="../static/image/tennis.svg", alt="tennis"></div>
@@ -13,31 +12,43 @@
         <div class = "stat fade-in"><img src="../static/image/statistics.svg", alt="data"></div>
         <div class = "data fade-in"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet varius finibus. Sed malesuada eros imperdiet augue consectetur tincidunt. Donec lacinia neque at ipsum vestibulum porta. Quisque id fringilla odio. Integer mollis, nisl sed viverra vulputate, libero mauris cursus ex, vel pellentesque nisl lectus quis lacus. Vivamus egestas justo nisi, nec sodales ante varius a. In at ullamcorper felis. Ut sit amet eros arcu. Cras nec tempus massa, vel imperdiet est. Mauris massa nunc, tempor sed varius et, egestas ac sem. Donec ornare augue at magna blandit porta. Etiam hendrerit posuere dolor et ultrices. Nunc turpis nunc, suscipit et pellentesque ut, sodales sed mi. Ut sed venenatis leo, at viverra purus. Aenean ligula sapien, pretium malesuada mi auctor, semper venenatis tortor. Suspendisse potenti. </div>
     </div>
-<table class="styled-table">
-    <thead>
+    <table class="styled-table">
+        <thead>
         <tr>
-            <th>Name</th>
-            <th>Points</th>
-            <th>Age</th>
+            <th>Date</th>
+            <th>Tournoi</th>
+            <th>Joueur 1</th>
+            <th>Cote</th>
+            <th>Classement</th>
+            <th>Prédiction</th>
+            <th>Prédiction</th>
+            <th>Classement</th>
+            <th>Cote</th>
+            <th>Joueur 2</th>
+
         </tr>
-    </thead>
-    <tbody>
+        </thead>
+        <tbody>
+        {% for row in matchs %}
+            <tr>
+                {% for cell in row %}
+                    <td> {{ cell }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
         <tr>
-            <td>Dom</td>
-            <td>6000</td>
-            <td>24</td>
-        </tr>
-        <tr>
-            <td>Pam</td>
-            <td>8960</td>
-            <td>21</td>
-        </tr>
-        <tr>
-            <td>Melissa</td>
-            <td>5150</td>
-            <td>24</td>
+            <td>22-01-2021</td>
+            <td>Rolland Garros</td>
+            <td>Roger Federer</td>
+            <td>1.53</td>
+            <td>1</td>
+            <td>96%</td>
+            <td>4%</td>
+            <td>104</td>
+            <td>2.3</td>
+            <td>Rafael Nadal</td>
         </tr>
         <!-- and so on... -->
-    </tbody>
-</table>
+        </tbody>
+    </table>
 {% endblock %}
