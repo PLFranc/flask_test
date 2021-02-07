@@ -12,8 +12,9 @@ def index():
 
 @application.route('/pronoo')
 def pronoo():
-    matchs = get_match()
-    return render_template('pronoo.html', matchs = matchs)
+    # matchs = get_match()
+    # return render_template('pronoo.html', matchs = matchs)
+    return render_template('pronoo.html')
 
 
 if __name__ == '__main__':
