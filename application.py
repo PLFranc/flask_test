@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-# from get_data import get_match
+from get_data import get_match
 
 
 application = Flask(__name__)
@@ -12,9 +12,9 @@ def index():
 
 @application.route('/pronoo')
 def pronoo():
-    # matchs = get_match()
-    # return render_template('pronoo.html', matchs = matchs)
-    return render_template('pronoo.html')
+    matchs = get_match()
+    return render_template('pronoo.html', matchs = matchs)
+
 
 
 if __name__ == '__main__':
