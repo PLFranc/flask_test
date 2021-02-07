@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from get_data import get_match
+# from get_data import get_match
 
 
 application = Flask(__name__)
