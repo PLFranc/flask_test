@@ -1,5 +1,6 @@
 import mysql.connector as co
 
+
 def get_match():
     match_list = []
     try:
@@ -10,7 +11,7 @@ def get_match():
                           port="3306",
                           database="Tennis"
                           )
-
+        print("OOOOOOOOOOOOO " + conn)
         try:
             cur = conn.cursor()
             # execute the INSERT statement
@@ -21,7 +22,7 @@ def get_match():
                 if row == None:
                     break
                 match_list.append(row)
-                print(type(row))
+
             cur.close()
             if (conn.is_connected()):
                 conn.close()
@@ -29,6 +30,6 @@ def get_match():
 
                 return match_list
         except co.Error as error:
-            print("Failed to insert record into match table {}".format(error))
+            print("Failed to select record into match table {}".format(error))
     except co.Error as error:
         print("Failed to connect :".format(error))
