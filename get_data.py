@@ -11,7 +11,7 @@ def get_match():
                           port="3306",
                           database="Tennis"
                           )
-        print("OOOOOOOOOOOOO " + conn)
+        print("OOOOOOOOOOOOO " + str(conn))
         try:
             cur = conn.cursor()
             # execute the INSERT statement
@@ -27,7 +27,7 @@ def get_match():
             if (conn.is_connected()):
                 conn.close()
                 print("MySQL connection is closed")
-
+                print(match_list)
                 return match_list
         except co.Error as error:
             print("Failed to select record into match table {}".format(error))
