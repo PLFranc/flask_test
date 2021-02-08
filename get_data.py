@@ -7,11 +7,11 @@ def get_match():
 
         conn = co.connect(user="admin",
                           password="2AMhpdFJ8WbMOgDWoE2z",
-                          host="plfranc.ctjpvwq07ek9.us-east-2.rds.amazonaws.com",
+                          host="aaoi655qep0ekl.ctjpvwq07ek9.us-east-2.rds.amazonaws.com",
                           port="3306",
-                          database="Tennis"
+                          database="ebdb"
                           )
-        print("OOOOOOOOOOOOO " + str(conn))
+
         try:
             cur = conn.cursor()
             # execute the INSERT statement
@@ -26,8 +26,7 @@ def get_match():
             cur.close()
             if (conn.is_connected()):
                 conn.close()
-                print("MySQL connection is closed")
-                print(match_list)
+
                 return match_list
         except co.Error as error:
             print("Failed to select record into match table {}".format(error))
