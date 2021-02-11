@@ -1,6 +1,7 @@
 import mysql.connector as co
 
 
+
 def get_match():
     match_list = []
     try:
@@ -14,7 +15,7 @@ def get_match():
 
         try:
             cur = conn.cursor()
-            # execute the INSERT statement
+            # execute the SELECT statement
             sql_statement = "SELECT * FROM Matchs"
             cur.execute(sql_statement)
             while True:
@@ -26,7 +27,6 @@ def get_match():
             cur.close()
             if (conn.is_connected()):
                 conn.close()
-
                 return match_list
         except co.Error as error:
             print("Failed to select record into match table {}".format(error))
