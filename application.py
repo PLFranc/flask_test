@@ -9,7 +9,7 @@ app = application
 
 @application.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('home.html')
 
 @application.route('/pronoo')
 def pronoo():

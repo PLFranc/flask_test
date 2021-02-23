@@ -7,12 +7,13 @@
 
 }
 *{
+    font-family: 'Jost', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+.backgroung{
     background-color: #24252A;
 }
 
@@ -209,3 +210,90 @@ table{
     font-weight: bold;
     color: #009879;
 }
+
+/* HOME PAGE CSS */
+@media screen and (min-width: 550px){
+    #background{
+    background-color: #7510f7;
+    padding: 10em;
+    }
+}
+@media screen and (max-width: 800px){
+    h1{
+        font-size: 7vw;
+    }
+    h2{
+        font-size: 3vw;
+    }
+}
+@media screen and (min-width: 800px){
+    h1{
+        font-size: 3.5em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+}
+
+
+h1{
+    font-family: 'Jost', sans-serif;
+    color: #edf0f1;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1em;
+    padding-left: 2em;
+    padding-top: 0.5em;
+    padding-right: 2em;
+
+}
+h2{
+    font-family: 'Jost', sans-serif;
+    color: #edf0f1;
+    font-weight: 400;
+    text-align: center;
+}
+
+section h2{
+    font-size: 2em;
+}
+.desktop{
+    display: block;
+    margin-top: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 16vw;
+    height: 7em;
+    width: auto;
+}
+#background{
+    background-color: #7510f7;
+    padding: 10em;
+}
+.center{
+    display: block;
+    font-family: 'Jost', sans-serif;
+    color: #edf0f1;
+    text-align: center;
+}
+h2.center{
+    margin-top: 5em;
+}
+p.center{
+
+    font-weight: 200;
+    margin-top: 2em;
+    margin-bottom: 5em;
+}
+.shiny{
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  /*&:hover {*/
+  /*  background-size: 100% 88%;*/
+  /*}*/
+}
+/*tableau */
+
